@@ -4,3 +4,5 @@
 .Ruserdata
 data/*
 !data/.gitkeep
+metadata_info/metadata/*
+!metadata_info/metadata/.gitkeep
