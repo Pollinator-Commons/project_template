@@ -12,7 +12,7 @@ Welcome to the SpaSES Lab project repository template! This repository is design
 4. [Standards for Documenting Code - NEEDS EDITING](#standards-for-documenting-code)
 5. [Committing, Pushing, and Pulling Changes](#committing-pushing-and-pulling-changes)
 6. [Using `.gitignore` - NEEDS EDITING](#using-gitignore)
-7. [README File Guidelines](#readme-file-guidelines)
+7. [`README.md` File Guidelines](#readmemd-file-guidelines)
 
 ---
 
@@ -135,8 +135,8 @@ git pull origin main
 
 ---
 
-## README File Guidelines
-A good README.md file is essential for explaining the purpose of the project, how to use it, and providing instructions for others who may be working with the repository. Here are the key components to include:
+## `README.md` File Guidelines
+A good `README.md` file is essential for explaining the purpose of the project, how to use it, and providing instructions for others who may be working with the repository. Here are the key components to include:
 
 ### Project Title and Description:
 - Provide a clear title and description of the project’s goals and objectives.
@@ -156,6 +156,6 @@ A good README.md file is essential for explaining the purpose of the project, ho
 ### Contact Information:
 - Provide information on how to contact the project maintainers for questions or issues.
 
-#### Remember, a well-structured README.md improves the usability and collaboration potential of the repository!
+#### Remember, a well-structured `README.md` improves the usability and collaboration potential of the repository!
 
 ---
