@@ -131,7 +131,7 @@ git pull origin main
 ---
 
 ## Using `.gitignore`
-- Add Information (currently the data folder is in .gitignore, should probably add metadata as well)
+- Add Information (currently the data and metadata folder is in .gitignore, but should still show up with the use of .gitkeep)
 
 ---
 
