@@ -19,7 +19,7 @@ drive_auth()
 # Replace the `folder_id` with the ID of the folder you want to download files from.
 # The `folder_id` is the part of the Google Drive URL that looks like:
 # https://drive.google.com/drive/folders/<folder_id>
-folder_id <- "YOUR_FOLDER_ID_HERE"
+folder_id <- "1JbvHIk-KH2PdK12UUjOLCfy_n77riEPy"
 
 # Retrieve the folder information using the folder ID
 folder <- drive_get(as_id(folder_id))
