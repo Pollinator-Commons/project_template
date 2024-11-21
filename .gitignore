@@ -11,7 +11,8 @@ data/final/*
 !data/final/.gitkeep
 metadata_info/metadata/*
 !metadata_info/metadata/.gitkeep
-outputs/*
+outputs/test/*
 !outputs/test/.gitkeep
+outputs/final/*
 !outputs/final/.gitkeep
 
