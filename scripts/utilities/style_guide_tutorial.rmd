@@ -17,14 +17,7 @@ output: html_document
 
 While **"lintr"** identifies both syntax and style errors, **"styler"** focuses solely on correcting style issues. You will need to manually address any syntax errors. However, using **"lintr"** to pinpoint these syntax errors can be more beneficial than standard error messages, which can often be vague and confusing.
 
-## Install and Load Packages as Needed
-
-```{r}
-install.packages("styler")
-install.packages("prettycode")
-install.packages("lintr")
-install.packages("ggplot2")
-```
+## Load Necessary Packages
 
 ```{r}
 library(styler)
