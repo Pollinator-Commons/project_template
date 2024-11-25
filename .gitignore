@@ -9,8 +9,6 @@ data/processed/*
 !data/processed/.gitkeep
 data/final/*
 !data/final/.gitkeep
-metadata_info/metadata/*
-!metadata_info/metadata/.gitkeep
 outputs/test/*
 !outputs/test/.gitkeep
 outputs/final/*
