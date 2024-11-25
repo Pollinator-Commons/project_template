@@ -1,5 +1,5 @@
 ---
-title: "Testing styler and lintr"
+title: "Style Guide Tutorial"
 output: html_document
 ---
 
