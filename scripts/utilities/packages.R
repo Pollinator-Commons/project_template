@@ -21,6 +21,9 @@ required_packages <- c(
   "readxl",      # For reading Excel files
   "jsonlite",    # For working with JSON data
   "htmltools",   # For building HTML content in R
+  "lintr",       # For checking script adherence to the style guide
+  "styler",      # For formatting code to the style guide
+  "prettycode"   # Used by styler to provide color-coded output
 )
 
 # STEP 2: Install Required Packages
