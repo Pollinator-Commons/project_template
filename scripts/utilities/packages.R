@@ -15,7 +15,12 @@ required_packages <- c(
   "googledrive", # For Google Drive integration
   "here",        # For constructing relative file paths
   "tidyr",       # For data tidying
-  "stringr"      # For string manipulation
+  "stringr",     # For string manipulation
+  "dataspice",   # For creating metadata for datasets
+  "listviewer",  # For viewing and exploring JSON structures interactively
+  "readxl",      # For reading Excel files
+  "jsonlite",    # For working with JSON data
+  "htmltools",   # For building HTML content in R
 )
 
 # STEP 2: Install Required Packages
