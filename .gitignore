@@ -3,8 +3,7 @@
 .RData
 .Ruserdata
 .DS_Store
-scripts/.DS_Store
-metadata_info/.DS_Store
+**/.DS_Store
 data/original/*
 !data/original/.gitkeep
 data/processed/*
