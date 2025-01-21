@@ -24,11 +24,11 @@ This repository serves as a template for managing your project and collaborating
 - Templates for downloading and uploading project data from/to the SpaSES Google Drive.
 - Guidelines for documenting your code, managing version control, and maintaining a well-organized project.
 
-To use this repository, you can either:
-- Clone it directly for a new project or
-- Fork it to create a personal copy for customization.
+To use this repository:
+- Click on the "Use this template" button, located in the upper right corner
+- Then click "Create a new repository"
 
-Once you’ve cloned or forked the repository, follow the instructions in each section to properly set up and maintain your project.
+Once you’ve created your own repository with this template, follow the instructions in each section to properly set up and maintain your project.
 
 ---
 
@@ -36,10 +36,10 @@ Once you’ve cloned or forked the repository, follow the instructions in each s
 
 The metadata template is essential for documenting key project information. It helps to standardize metadata for easier sharing, querying, and organizing your project files. To fill out the metadata template:
 
-1. Open the metadata template file (`project_metadata.R`) found in the `metadata_info/` directory.
+1. Open the metadata template file (`project_metadata.R`) found in the `scripts/utilities/` directory.
 2. Review the fields provided and fill in the necessary details such as:
 4. Add any other project-specific metadata as needed.
-5. Save your completed metadata file in the `metadata_info/metadata/` directory of your project.
+5. Save your completed metadata file in the `metadata_info/final/` directory of your project.
 
 #### Ensure that the metadata is kept up to date as the project progresses.
 
@@ -51,7 +51,7 @@ This repository includes templates for downloading and uploading data from/to th
 
 ### 1. Downloading Data from SpaSES Google Drive
 
-To download project data from the SpaSES Google Drive to your local R environment, you can use the provided script `download_data.R` found in the `data/utilities/` directory. Follow these steps:
+To download project data from the SpaSES Google Drive to your local R environment, you can use the provided script `download_data.R` found in the `scripts/utilities/` directory. Follow these steps:
 
 - Open the `download_data.R` script.
 - Replace the `folder_id` variable with your appropriate project folder ID located in the SpaSES Lab Google Drive (further details can be found in the `download_data.R` script).
@@ -59,7 +59,7 @@ To download project data from the SpaSES Google Drive to your local R environmen
 
 ### 2. Uploading Data to SpaSES Google Drive
 
-To upload data from your local R environment to the SpaSES Google Drive, use the provided script `upload_data.R` found in the `data/utilities/` directory. Here’s how:
+To upload data from your local R environment to the SpaSES Google Drive, use the provided script `upload_data.R` found in the `scripts/utilities/` directory. Here’s how:
 
 1. Open the `upload_data.R` script.
 2. Replace the `folder_id` variable with your appropriate project folder ID located in the SpaSES Lab Google Drive (further details can be found in the `upload_data.R` script).
