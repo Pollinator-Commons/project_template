@@ -25,8 +25,8 @@ This repository serves as a template for managing your project and collaborating
 - Guidelines for documenting your code, managing version control, and maintaining a well-organized project.
 
 To use this repository:
-- Click on the "Use this template" button, located in the upper right corner
-- Then click "Create a new repository"
+- Click on the `Use this template` button, located in the upper right corner
+- Then click `Create new repository`
 
 Once you’ve created your own repository with this template, follow the instructions in each section to properly set up and maintain your project.
 
