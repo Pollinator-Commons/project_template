@@ -93,7 +93,7 @@ Writing clear, readable, and well-documented code is essential for collaboration
 - Use R Markdown or similar tools for documenting analyses that require detailed explanations and results.
 
 ### Managing Dependencies with `packages.R`
-- A script template called `packages.R` is included in the repository for managing required packages.
+- A script template called `packages.R` is included in the `scripts/utilities/` directory, and can be used for managing required packages.
 - Use `packages.R` to install all the necessary packages for running your scripts. Add or remove package installation commands as needed for your project.
 - To load packages, use `library()` calls in your individual scripts to load all required packages at the very beginning of each file. This ensures that dependencies are loaded before executing the rest of the code.
 
@@ -159,8 +159,23 @@ data/original/*
 !data/original/.gitkeep
 ```
 ... the `!` negates the ignore rule, meaning Git will track the `.gitkeep` file inside the `data/original/` directory. 
-- This is helpful when you want to ignore everything inside a directory, but at the same time want to check-in the folder and keep the directory structure. 
- 
+- This is helpful when you want to ignore everything inside a directory, but at the same time want to check-in the folder and keep the directory structure.
+
+### For Mac Users: What are the `.DS_Store` Files?
+
+The `.DS_Store` (Desktop Service Store) file is a hidden macOS system file that appears in every directory that a Mac user opens. It is automatically created by Finder, to store the metadata about the folder it is in, things like; icon positions, view options, window size and position, sorting preferences, etc.. 
+
+They are not needed for most projects and can be ignored in Git by adding these lines to your `.gitignore` file...
+```r
+# simple approach for ignoring .DS_Store files everywhere in the repository
+.DS_Store
+
+# more explicit approach for ignoring .DS_Store file in all subdrectories
+**/.DS_Store
+```
+... I suggest adding both lines, as it just enures all `.DS_Store` files, even deepy nested ones, will be ignored, as sometimes `.gitignore` can have unusual rules affecting recursion. 
+
+
 ---
 
 ## `README.md` File Guidelines
