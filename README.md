@@ -11,7 +11,7 @@ Welcome to the SpaSES Lab project repository template! This repository is design
 3. [Downloading and Uploading Data to/from SpaSES Google Drive](#downloading-and-uploading-data-tofrom-spases-google-drive)
 4. [Standards for Documenting Code - NEEDS EDITING](#standards-for-documenting-code)
 5. [Committing, Pushing, and Pulling Changes](#committing-pushing-and-pulling-changes)
-6. [Using `.gitignore` - NEEDS EDITING](#using-gitignore)
+6. [Using `.gitignore`](#using-gitignore)
 7. [`README.md` File Guidelines](#readmemd-file-guidelines)
 
 ---
@@ -131,8 +131,36 @@ git pull origin main
 ---
 
 ## Using `.gitignore`
-- Add Information (currently the data and metadata folder is in .gitignore, but should still show up with the use of .gitkeep)
 
+You can configure Git to ignore files you don't want to check in to GitHub.
+
+- The `.gitignore` file in you repository's root directory will tell Git which files and directories to ignore when you make a commit.
+
+
+Here is an example of how it can be used, by adding this into the `.gitignore` file... 
+```r
+data/original/*
+```
+... it tells Git to ignore everying inside the `data/original` directory when commiting. 
+
+### Using `.gitkeep` with `.gitignore`:
+However, Git doesn't track empty folders. 
+If you want to ensure the `data/original` directory still exists in the repository, while still ignoring it's contents, you will first need to create a `.gitkeep` file.
+You can do so like this in the terminal...
+```r
+touch data/original/.gitkeep
+```
+... and then add the following lines in the `.gitignore` file...
+```r
+# ignore files in the folder
+data/original/*
+
+# but keep the folder
+!data/original/.gitkeep
+```
+... the `!` negates the ignore rule, meaning Git will track the `.gitkeep` file inside the `data/original/` directory. 
+- This is helpful when you want to ignore everything inside a directory, but at the same time want to check-in the folder and keep the directory structure. 
+ 
 ---
 
 ## `README.md` File Guidelines
