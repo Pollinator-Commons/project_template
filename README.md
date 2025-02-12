@@ -41,6 +41,8 @@ The metadata template is essential for documenting key project information. It h
 4. Add any other project-specific metadata as needed.
 5. Save your completed metadata file in the `metadata_info/final/` directory of your project.
 
+The metadata template uses the `dataspice` package. A tutorial on how to use the package can be found here: https://annakrystalli.me/dataspice-tutorial/ 
+
 #### Ensure that the metadata is kept up to date as the project progresses.
 
 ---
