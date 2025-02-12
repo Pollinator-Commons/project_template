@@ -16,8 +16,8 @@ library(here)
 # Define file paths for data and variable information files
 # Replace these with the actual file paths for your data and metadata
 data_files <- list(
-  "Data_File1" = here("data", "Data_File1.xlsx"),
-  "Data_File2" = here("data", "Data_File2.xlsx")
+  "Data_File1" = here("data", "final", "Data_File1.xlsx"),
+  "Data_File2" = here("data", "final", "Data_File2.xlsx")
 )
 
 variable_info_files <- list(
