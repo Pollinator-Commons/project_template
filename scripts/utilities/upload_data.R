@@ -16,22 +16,44 @@ drive_auth()
 
 # STEP 2: Specify the Google Drive Folder
 # -------------------------------------------------------------
-# Replace `folder_id` with the ID of the folder where you want to upload files.
-# The `folder_id` is the part of the Google Drive URL that looks like:
-# https://drive.google.com/drive/folders/<folder_id>
-folder_id <- "YOUR_FOLDER_ID_HERE"
+# Replace 'YOUR_FOLDER_ID_HERE' with the ID of the corresponding folder you
+# want to upload files to.
+# The folder ID is the part of the Google Drive URL that looks like:
+# https://drive.google.com/drive/folders/<Folder ID>?usp=drive_link
+gd_data_original <- "YOUR_FOLDER_ID_HERE"
+gd_data_processed <- "YOUR_FOLDER_ID_HERE"
+gd_data_final <- "YOUR_FOLDER_ID_HERE"
+gd_outputs_test <- "YOUR_FOLDER_ID_HERE"
+gd_outputs_final <- "YOUR_FOLDER_ID_HERE"
+gd_metadata_original <- "YOUR_FOLDER_ID_HERE"
+gd_metadata_processed <- "YOUR_FOLDER_ID_HERE"
+gd_metadata_final <- "YOUR_FOLDER_ID_HERE"
 
-# Retrieve the folder information using the folder ID
-folder <- drive_get(as_id(folder_id))
+# Replace 'gd_FOLDER_OBJECT_NAME_HERE' with the folder's object name (e.g. gd_data_final)
+# that you want to upload files to.
+gd_folder_id <- gd_FOLDER_OBJECT_NAME_HERE
 
 # STEP 3: Specify Local Files to Upload
 # -------------------------------------------------------------
+# Objects for local directories pathways created
+ld_data_original <- "data/original"
+ld_data_processed <- "data/processed"
+ld_data_final <- "data/final"
+ld_outputs_test <- "outputs/test"
+ld_outputs_final <- "outputs/final"
+ld_metadata_original <- "metadata_info/original"
+ld_metadata_processed <- "metadata_info/processed"
+ld_metadata_final <- "metadata_info/final"
+
+# Replace 'ld_FOLDER_OBJECT_NAME_HERE' with the folder's object name (e.g. ld_data_final)
+# that you want to download the files from.
+ld_folder_path <- ld_FOLDER_OBJECT_NAME_HERE
+
 # Use `list.files()` to specify the files you want to upload.
-# Update the `path` argument to point to your local directory:
 # - Use `here()` for relative paths within your project.
 # - Use an absolute path for a specific folder location.
 local_files <- list.files(
-  path = here("data"), # Replace with your desired folder
+  path = here(ld_folder_path), # Replace with your desired folder
   full.names = TRUE    # Includes full file paths for uploading
 )
 
@@ -47,7 +69,7 @@ lapply(
   function(file) {
     drive_upload(
       media = file,        # Local file path
-      path = as_id(folder_id), # Target Google Drive folder
+      path = as_id(gd_folder_id), # Target Google Drive folder
       overwrite = FALSE    # Set to TRUE to overwrite existing files
     )
   }
@@ -56,7 +78,7 @@ lapply(
 # =============================================================
 # CUSTOMIZATION NOTES:
 # -------------------------------------------------------------
-# 1. Replace `YOUR_FOLDER_ID_HERE` with the ID of your Google Drive folder.
+# 1. Customize the Google Drive folder objects and local directories pathways to fit your needs.
 # 2. To specify files for upload:
 #    - Update the `path` argument in `list.files()`:
 #      a) Use `here()` for relative paths within your project (e.g., here("data")).

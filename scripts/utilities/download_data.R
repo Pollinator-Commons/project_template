@@ -16,39 +16,58 @@ drive_auth()
 
 # STEP 2: Specify the Google Drive Folder
 # -------------------------------------------------------------
-# Replace the `folder_id` with the ID of the folder you want to download files from.
-# The `folder_id` is the part of the Google Drive URL that looks like:
-# https://drive.google.com/drive/folders/<folder_id>
-folder_id <- "YOUR_FOLDER_ID_HERE"
+# Replace 'YOUR_FOLDER_ID_HERE' with the ID of the corresponding folder you
+# want to download files from.
+# The folder ID is the part of the Google Drive URL that looks like:
+# https://drive.google.com/drive/folders/<Folder ID>?usp=drive_link
+gd_data_original <- "YOUR_FOLDER_ID_HERE"
+gd_data_processed <- "YOUR_FOLDER_ID_HERE"
+gd_data_final <- "YOUR_FOLDER_ID_HERE"
+gd_outputs_test <- "YOUR_FOLDER_ID_HERE"
+gd_outputs_final <- "YOUR_FOLDER_ID_HERE"
+gd_metadata_original <- "YOUR_FOLDER_ID_HERE"
+gd_metadata_processed <- "YOUR_FOLDER_ID_HERE"
+gd_metadata_final <- "YOUR_FOLDER_ID_HERE"
+
+# Replace 'gd_FOLDER_OBJECT_NAME_HERE' with the folder's object name (e.g. gd_data_final)
+# that you want to download files from.
+gd_folder_id <- gd_FOLDER_OBJECT_OBJECT_NAME_HERE
 
 # Retrieve the folder information using the folder ID
-folder <- drive_get(as_id(folder_id))
+gd_folder <- drive_get(as_id(gd_folder_id))
 
 # STEP 3: List Files in the Folder
 # -------------------------------------------------------------
 # Use `drive_ls()` to list all files in the specified folder.
 # Note: If there are subfolders, this function will not list files 
 # in the subfolders. Each subfolder must be processed separately.
-gdrive_files <- drive_ls(folder)
+gdrive_files <- drive_ls(gd_folder)
 
-# STEP 4: Download Files to a Local Directory
+# STEP 4: Specify Local Directory Pathways
 # -------------------------------------------------------------
-# Specify where you want to save the downloaded files.
-# Update the file path (`here("data", ...)`) to your desired location.
-# For example:
-# - Save files to the project's "data" folder: here("data", ...)
-# - Save files to an absolute path: "/path/to/your/folder"
-# 
-# Use `overwrite = FALSE` to avoid overwriting existing files.
-# If `overwrite = TRUE`, existing files with the same name will be replaced.
+# Objects for local directories pathways created
+ld_data_original <- "data/original"
+ld_data_processed <- "data/processed"
+ld_data_final <- "data/final"
+ld_outputs_test <- "outputs/test"
+ld_outputs_final <- "outputs/final"
+ld_metadata_original <- "metadata_info/original"
+ld_metadata_processed <- "metadata_info/processed"
+ld_metadata_final <- "metadata_info/final"
 
+# Replace 'ld_FOLDER_OBJECT_NAME_HERE' with the folder's object name (e.g. ld_data_final)
+# that you want to upload the files to.
+ld_folder_path <- ld_FOLDER_OBJECT_NAME_HERE
+
+# STEP 5: Download Files to a Local Directory
+# -------------------------------------------------------------
 # Download all files listed in `gdrive_files`
 lapply(
   gdrive_files$id,  # Loop through the IDs of the files in the folder
   function(file_id) {
     drive_download(
       as_id(file_id),  # Google Drive file ID
-      path = here("data", gdrive_files[gdrive_files$id == file_id, ]$name), # Local save path
+      path = here(ld_folder_path, gdrive_files[gdrive_files$id == file_id, ]$name),
       overwrite = FALSE  # Change to TRUE if you want to overwrite existing files
     )
   }
@@ -57,7 +76,7 @@ lapply(
 # =============================================================
 # CUSTOMIZATION NOTES:
 # -------------------------------------------------------------
-# 1. Replace `YOUR_FOLDER_ID_HERE` with the ID of your Google Drive folder.
+# 1. Customize the Google Drive folder objects and local directories pathways to fit your needs.  
 # 2. To change the local file path:
 #    - Update the `path` argument in `drive_download()`:
 #      a) Use `here()` for relative paths within your project (e.g., here("data", ...)).
@@ -66,4 +85,5 @@ lapply(
 # 3. If the folder contains subfolders, you must handle each subfolder separately 
 #    by updating `folder_id` and re-running the script for each subfolder.
 # 4. Use `overwrite = TRUE` only if you want to replace files in the local directory.
+# 5. If you encounter download errors, ensure the local directory and file paths are correct.
 # =============================================================
