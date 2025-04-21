@@ -7,7 +7,7 @@ Welcome to the SpaSES Lab project repository template! This repository is design
 
 ## Table of Contents
 1. [How to Use This Repository](#how-to-use-this-repository)
-2. [Creating Project Metadata Template](#creating-project-metadata)
+2. [Creating Project Metadata](#creating-project-metadata)
 3. [Downloading and Uploading Data to and from the SpaSES Google Drive](#downloading-and-uploading-data-to-and-from-the-spases-google-drive)
 4. [Standards for Documenting Code](#standards-for-documenting-code)
 5. [Committing, Pushing, and Pulling Changes](#committing-pushing-and-pulling-changes)
