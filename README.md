@@ -7,9 +7,9 @@ Welcome to the SpaSES Lab project repository template! This repository is design
 
 ## Table of Contents
 1. [How to Use This Repository](#how-to-use-this-repository)
-2. [Filling Out the Metadata Template - NEEDS EDITING](#filling-out-the-metadata-template)
-3. [Downloading and Uploading Data to/from SpaSES Google Drive](#downloading-and-uploading-data-tofrom-spases-google-drive)
-4. [Standards for Documenting Code - NEEDS EDITING](#standards-for-documenting-code)
+2. [Creating Project Metadata Template](#creating-project-metadata)
+3. [Downloading and Uploading Data to and from the SpaSES Google Drive](#downloading-and-uploading-data-to-and-from-the-spases-google-drive)
+4. [Standards for Documenting Code](#standards-for-documenting-code)
 5. [Committing, Pushing, and Pulling Changes](#committing-pushing-and-pulling-changes)
 6. [Using `.gitignore`](#using-gitignore)
 7. [`README.md` File Guidelines](#readmemd-file-guidelines)
@@ -21,52 +21,55 @@ Welcome to the SpaSES Lab project repository template! This repository is design
 This repository serves as a template for managing your project and collaborating with others in the SpaSES Lab. It provides:
 
 - A consistent file structure for storing code, data, and metadata.
-- Templates for downloading and uploading project data from/to the SpaSES Google Drive.
+- Templates for downloading and uploading project data to and from the SpaSES Google Drive.
+- Tutorials for using styling and linting packages.
+- Dataspice package tutorial for creating machine‑readable metadata and human‑friendly documentation.
 - Guidelines for documenting your code, managing version control, and maintaining a well-organized project.
 
 To use this repository:
-- Click on the `Use this template` button, located in the upper right corner
-- Then click `Create new repository`
+- Click on the `Use this template` button, located in the upper right corner, then click `Create new repository`.
+- You'll be directed to a new page, fill out the neccessary criteria, relevant to your project, then click `Create repository`. 
+- Toward the right side of the screen, click on the `Code` button, then copy your repository's URL to your clipboard.
+- Open RStudio on your local environment, in the `Project` dropdown menu, upper right corner, click `New Project` > `Version Control` > `Git`.
+- Paste your repository's URL, provide a name and location for your directory, then click `Create Project`.
 
-Once you’ve created your own repository with this template, follow the instructions in each section to properly set up and maintain your project.
+Once you’ve created your own repository with this template and cloned it to your local environment, follow the instructions in each section to properly set up and maintain your project.
 
 ---
 
-## Filling Out the Metadata Template
+## Creating Project Metadata
 
-The metadata template is essential for documenting key project information. It helps to standardize metadata for easier sharing, querying, and organizing your project files. To fill out the metadata template:
+Well‑crafted metadata is in most cases a neccessity, as it transforms raw files into FAIR (Findable, Accessible, Interoperable, Reusable) assets—maximizing your data’s visibility, utility, and longevity, often described as "data about data". 
 
-1. Open the metadata template file (`project_metadata.R`) found in the `scripts/utilities/` directory.
-2. Review the fields provided and fill in the necessary details such as:
-4. Add any other project-specific metadata as needed.
-5. Save your completed metadata file in the `metadata_info/final/` directory of your project.
+Some find that manually creating comprehensive metadata can be time‑consuming and error‑prone, as it requires meticulously documenting every aspect of your data by hand. To streamline that effort, the `dataspice` package provides a simple, scriptable workflow to auto‑generate metadata templates, guide you through populating them, and create machine‑readable metadata (standardized `JSON-LD` file) and human‑friendly documentation (a `README`-style webpage). Located in the `scripts/utilities/project_metadata/` directory, you'll find a script, called `dataspice_tutorial_script.R`, that acts as a tutorial on how to use the `dataspice` package, using fake example data, providing guidence on applying this package to your workflow.
 
-The metadata template uses the `dataspice` package. A tutorial on how to use the package can be found here: https://annakrystalli.me/dataspice-tutorial/ 
+Another `dataspice` tutorial, provided by the package author, can be found here: https://annakrystalli.me/dataspice-tutorial/ 
 
 #### Ensure that the metadata is kept up to date as the project progresses.
 
+## The `docs/` Directory
+
+This directory serves a similar role to metadata, but it's specifically intended to store documentation that helps humans understand your data, rather than information used by machines. This includes, but is not limited to:
+
+- The `dataspice` `README`-style `HTML`containing tables of variables, interactive maps, data previews, etc.
+- R Markdown files or similar tools for documenting analyses that require detailed explanations and results
+- Other documentation materials
+- Help Files
+- And More
+
 ---
 
-## Downloading and Uploading Data to/from SpaSES Google Drive
+## Downloading and Uploading Data to and from the SpaSES Google Drive
 
 This repository includes templates for downloading and uploading data from/to the SpaSES Google Drive. For both downloading and uploading, ensure you have the necessary permissions to access the Google Drive folder. Here’s how to use the provided templates:
 
 ### 1. Downloading Data from SpaSES Google Drive
 
-To download project data from the SpaSES Google Drive to your local R environment, you can use the provided script `download_data.R` found in the `scripts/utilities/` directory. Follow these steps:
-
-- Open the `download_data.R` script.
-- Replace the `folder_id` variable with your appropriate project folder ID located in the SpaSES Lab Google Drive (further details can be found in the `download_data.R` script).
-- Run the script to authenticate and download the files into your local project directory.
+To download project data from the SpaSES Google Drive to your local R environment, you can use the provided script `download_data.R` found in the `scripts/utilities/` directory. Run the script, following the provided steps and customizing as needed, to authenticate and download the files into your local project directory.
 
 ### 2. Uploading Data to SpaSES Google Drive
 
-To upload data from your local R environment to the SpaSES Google Drive, use the provided script `upload_data.R` found in the `scripts/utilities/` directory. Here’s how:
-
-1. Open the `upload_data.R` script.
-2. Replace the `folder_id` variable with your appropriate project folder ID located in the SpaSES Lab Google Drive (further details can be found in the `upload_data.R` script).
-3. Specify the local files to upload by adjusting the file paths in the script.
-4. Run the script to authenticate and upload the files to the designated project folder.
+To upload data from your local R environment to the SpaSES Google Drive, use the provided script `upload_data.R` found in the `scripts/utilities/` directory. Run the script, following the provided steps and customizing as needed, to authenticate and upload the files to the designated project folder.
 
 ---
 
@@ -79,19 +82,23 @@ Writing clear, readable, and well-documented code is essential for collaboration
 - Use inline comments to clarify specific lines of code where needed.
 - Keep comments concise but descriptive.
 
-### File, Function, and Variable Naming - Insert more information on file and variable naming standards
+### File, Function, and Variable Naming
 - Use meaningful names that clearly describe the purpose of the function or variable.
 - Follow a consistent naming convention (e.g., `camelCase`, `snake_case`) throughout your scripts.
 
-### Script Organization - Insert more information on when to use multiple scripts or files
+### Script Organization
 - Organize scripts into sections using clear comments (e.g., `### Data Cleaning`, `### Data Analysis`).
 - Consider separating large scripts into smaller, modular functions or scripts based on functionality.
 
-### Code Formatting (Style Guide) - Insert more information for using the `lintr` and `styler` packages
-- Maintain consistent indentation (e.g., 2 spaces or 4 spaces per indent).
-- Ensure there’s a consistent style for brackets, spaces, and operators.
+### Code Formatting (Style Guide)
+- A style guide is a set of standards for the formatting of information, consistency of this creates a shared understanding within and across files and projects.
+- A commonly used style guide in the R community is the `tidyverse style guide`, which outlines clear conventions for writing clean, consistent, and readable code that fits naturally with the tidyverse ecosystem.
+- Packages that support code maintenance and consistent style adherence include:
+  - `styler`: Automatically formats R code according to a consistent style guide to improve readability and maintainability.
+  - `lintr`: Analyzes R code to detect potential issues, enforce coding standards, and suggest improvements.
+- A `lintr` and `styler` tutorial, called `style_guide_tutorial.rmd` can be found in the `scripts/utilities/` directory, showing the utility of these packages.
 
-### Documentation Tools - More information needed here
+### Documentation Tools
 - Use R Markdown or similar tools for documenting analyses that require detailed explanations and results.
 
 ### Managing Dependencies with `packages.R`
