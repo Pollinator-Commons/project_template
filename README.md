@@ -87,7 +87,7 @@ Writing clear, readable, and well-documented code is essential for collaboration
 
 ### File, Function, and Variable Naming
 - Use meaningful names that clearly describe the purpose of the function or variable.
-- Follow a consistent naming convention (e.g., `camelCase`, `snake_case`) throughout your scripts.
+- Follow a consistent naming convention (e.g., `snake_case`) throughout your scripts.
 
 ### Script Organization
 - Organize scripts into sections using clear comments (e.g., `### Data Cleaning`, `### Data Analysis`).
