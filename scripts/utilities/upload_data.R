@@ -25,9 +25,8 @@ gd_data_processed <- "YOUR_FOLDER_ID_HERE"
 gd_data_final <- "YOUR_FOLDER_ID_HERE"
 gd_outputs_test <- "YOUR_FOLDER_ID_HERE"
 gd_outputs_final <- "YOUR_FOLDER_ID_HERE"
-gd_metadata_original <- "YOUR_FOLDER_ID_HERE"
-gd_metadata_processed <- "YOUR_FOLDER_ID_HERE"
-gd_metadata_final <- "YOUR_FOLDER_ID_HERE"
+gd_docs_drafts <- "YOUR_FOLDER_ID_HERE"
+gd_docs_final <- "YOUR_FOLDER_ID_HERE"
 
 # Replace 'gd_FOLDER_OBJECT_NAME_HERE' with the folder's object name (e.g. gd_data_final)
 # that you want to upload files to.
@@ -41,9 +40,8 @@ ld_data_processed <- "data/processed"
 ld_data_final <- "data/final"
 ld_outputs_test <- "outputs/test"
 ld_outputs_final <- "outputs/final"
-ld_metadata_original <- "metadata_info/original"
-ld_metadata_processed <- "metadata_info/processed"
-ld_metadata_final <- "metadata_info/final"
+ld_docs_drafts <- "docs/drafts"
+ld_docs_final <- "docs/final"
 
 # Replace 'ld_FOLDER_OBJECT_NAME_HERE' with the folder's object name (e.g. ld_data_final)
 # that you want to download the files from.

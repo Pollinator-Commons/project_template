@@ -6,8 +6,6 @@
 library(readr)
 library(dataspice)
 library(listviewer)
-library(readxl)
-library(tidyr)
 library(dplyr)
 library(jsonlite)
 library(here)
