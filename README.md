@@ -43,7 +43,10 @@ Well‑crafted metadata is in most cases a neccessity, as it transforms raw file
 
 Some find that manually creating comprehensive metadata can be time‑consuming and error‑prone, as it requires meticulously documenting every aspect of your data by hand. To streamline that effort, the `dataspice` package provides a simple, scriptable workflow to auto‑generate metadata templates, guide you through populating them, and create machine‑readable metadata (standardized `JSON-LD` file) and human‑friendly documentation (a `README`-style webpage). Located in the `scripts/utilities/project_metadata/` directory, you'll find a script, called `dataspice_tutorial_script.R`, that acts as a tutorial on how to use the `dataspice` package, using fake example data, providing guidence on applying this package to your workflow.
 
-Another `dataspice` tutorial, provided by the package author, can be found here: https://annakrystalli.me/dataspice-tutorial/ 
+Another `dataspice` tutorial can be found here: https://annakrystalli.me/dataspice-tutorial/
+
+
+The `dataspice` GitHub Repository can be found here: https://github.com/ropensci/dataspice
 
 #### Ensure that the metadata is kept up to date as the project progresses.
 
@@ -97,6 +100,11 @@ Writing clear, readable, and well-documented code is essential for collaboration
   - `styler`: Automatically formats R code according to a consistent style guide to improve readability and maintainability.
   - `lintr`: Analyzes R code to detect potential issues, enforce coding standards, and suggest improvements.
 - A `lintr` and `styler` tutorial, called `style_guide_tutorial.rmd` can be found in the `scripts/utilities/` directory, showing the utility of these packages.
+
+The `styler` GitHub Repository can be found here: https://github.com/r-lib/styler
+
+
+The `lintr` GitHub Repository can be found here: https://github.com/r-lib/lintr
 
 ### Documentation Tools
 - Use R Markdown or similar tools for documenting analyses that require detailed explanations and results.
