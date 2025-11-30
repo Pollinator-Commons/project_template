@@ -1,9 +1,10 @@
 
-![SpaSES_Logo](https://github.com/user-attachments/assets/1b41df1c-47c8-480e-92b1-c4dc5fc4571e)
+#![SpaSES_Logo](https://github.com/user-attachments/assets/1b41df1c-47c8-480e-92b1-c4dc5fc4571e)
+
 
 # Project Repository Template
 
-Welcome to the SpaSES Lab project repository template! This repository is designed to help organize your project with standardized practices for managing code, data, and metadata. The following sections provide instructions on how to effectively use this repository template.
+Welcome to the Pollinator Commons project repository template! This repository is borrowed from the SPASES Lab at Boise State (thanks, Matt!) and was designed to help organize your project with standardized practices for managing code, data, and metadata. The following sections provide instructions on how to effectively use this repository template.
 
 ## Table of Contents
 1. [How to Use This Repository](#how-to-use-this-repository)
@@ -18,10 +19,10 @@ Welcome to the SpaSES Lab project repository template! This repository is design
 
 ## How to Use This Repository
 
-This repository serves as a template for managing your project and collaborating with others in the SpaSES Lab. It provides:
+This repository serves as a template for managing your project and collaborating with others. It provides:
 
 - A consistent file structure for storing code, data, and metadata.
-- Templates for downloading and uploading project data to and from the SpaSES Google Drive.
+- Templates for downloading and uploading project data to and from the Google Drive.
 - Tutorials for using styling and linting packages.
 - Dataspice package tutorial for creating machine‑readable metadata and human‑friendly documentation.
 - Guidelines for documenting your code, managing version control, and maintaining a well-organized project.
@@ -62,17 +63,17 @@ This directory serves a similar role to metadata, but it's specifically intended
 
 ---
 
-## Downloading and Uploading Data to and from the SpaSES Google Drive
+## Downloading and Uploading Data to and from the Pollinator Commons Google Drive
 
-This repository includes templates for downloading and uploading data from/to the SpaSES Google Drive. For both downloading and uploading, ensure you have the necessary permissions to access the Google Drive folder. Here’s how to use the provided templates:
+This repository includes templates for downloading and uploading data from/to the Pollinator Commons Google Drive. For both downloading and uploading, ensure you have the necessary permissions to access the Google Drive folder. Here’s how to use the provided templates:
 
-### 1. Downloading Data from SpaSES Google Drive
+### 1. Downloading Data from Google Drive
 
-To download project data from the SpaSES Google Drive to your local R environment, you can use the provided script `download_data.R` found in the `scripts/utilities/` directory. Run the script, following the provided steps and customizing as needed, to authenticate and download the files into your local project directory.
+To download project data from the Google Drive to your local R environment, you can use the provided script `download_data.R` [NOT UPDATED YET!!! CHECK BACK!] found in the `scripts/utilities/` directory. Run the script, following the provided steps and customizing as needed, to authenticate and download the files into your local project directory.
 
-### 2. Uploading Data to SpaSES Google Drive
+### 2. Uploading Data to Google Drive
 
-To upload data from your local R environment to the SpaSES Google Drive, use the provided script `upload_data.R` found in the `scripts/utilities/` directory. Run the script, following the provided steps and customizing as needed, to authenticate and upload the files to the designated project folder.
+To upload data from your local R environment to the Pollinator Commons Google Drive, use the provided script `upload_data.R` {NOT UPDATED YET! CHECK BACK!!!] found in the `scripts/utilities/` directory. Run the script, following the provided steps and customizing as needed, to authenticate and upload the files to the designated project folder.
 
 ---
 
