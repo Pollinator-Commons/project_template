@@ -1,5 +1,5 @@
 
-#![SpaSES_Logo](https://github.com/user-attachments/assets/1b41df1c-47c8-480e-92b1-c4dc5fc4571e)
+#![Dubkhar, Uttarakhand field site](https://github.com/Pollinator-Commons/project_template/blob/a277a2171ec83e1c9579c6cd687a5124c382579e/IMG_2668.HEIC)
 
 
 # Project Repository Template
