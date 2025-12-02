@@ -1,5 +1,5 @@
 
-#![Dubkhar, Uttarakhand field site](https://github.com/Pollinator-Commons/project_template/blob/9d9f1d13c105370554191b7d48fc70e9606ae34b/DUB.jpeg)
+![Dubkhar, Uttarakhand field site](https://github.com/Pollinator-Commons/project_template/blob/9d9f1d13c105370554191b7d48fc70e9606ae34b/DUB.jpeg)
 
 
 # Project Repository Template
